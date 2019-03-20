@@ -1,25 +1,37 @@
 <idea-plugin>
-    <id>co.simpleq</id>
-    <name>SimpleLaunch</name>
-    <vendor email="support@simpleq.co" url="http://simpleq.co">simpleq</vendor>
-    <version>0.0.1</version>
-    <description>qLaunch is a plugin that scans and stores all your IntelliJ projects in your machine and provide you quick launch functionality</description>
+  <id>co.simpleq.qlaunch</id>
+  <name>qLaunch</name>
+  <vendor email="ruwankamadhushan@gmail.com" url="http://simpleq.co">simpleq</vendor>
+  <version>0.0.1</version>
+  <description>
+    <![CDATA[
+        qLaunch is a plugin that scans and stores all your IntelliJ projects
+        in your machine and provide you quick launch functionality
+    ]]>
+  </description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="co.simpleq.qlaunch.QLaunchSettings"/>
-    </extensions>
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService serviceImplementation="co.simpleq.qlaunch.QLaunchSettings"/>
+  </extensions>
 
-    <actions>
-        <group id="MyPlugin.SampleMenu" text="qLaunch" description="Quick Project Launch">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="Myplugin.Textboxes" class="co.simpleq.qlaunch.ProjectLocateAction" text="Locate Projects" description="Scan all drives for IntelliJ projects"/>
-            <action id="Myplugin.Textboxes2" class="co.simpleq.qlaunch.ProjectOpenAction" text="Open Project" description="project open dialog"/>
-        </group>
-    </actions>
+  <actions>
+    <action class="co.simpleq.qlaunch.QLaunchProjectLocateAction"
+      description="Scan all drives for IntelliJ projects"
+      id="co.simpleq.qlaunch.QLaunchProjectLocateAction" text="Locate Projects">
+      <add-to-group anchor="last" group-id="ToolsMenu"/>
+      <keyboard-shortcut first-keystroke="control alt Q" keymap="$default"/>
+    </action>
+    <action class="co.simpleq.qlaunch.QLaunchProjectOpenAction"
+      description="project open dialog" id="co.simpleq.qlaunch.QLaunchProjectOpenAction"
+      text="Open Project">
+      <add-to-group anchor="last" group-id="ToolsMenu"/>
+      <keyboard-shortcut first-keystroke="control shift Q" keymap="$default"/>
+    </action>
+  </actions>
 </idea-plugin>

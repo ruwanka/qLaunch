@@ -4,35 +4,36 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class QLaunchPluginState {
-  private String pluginVersion = "";
-  private boolean enableRuntimePatch = false;
-  private Map<String, String> ideaProjects = new HashMap<>();
 
-  public String getPluginVersion() {
-    return pluginVersion;
-  }
+    private String pluginVersion = "";
+    private boolean enableRuntimePatch = false;
+    private Map<String, String> ideaProjects = new HashMap<>();
 
-  public void setPluginVersion(String pluginVersion) {
-    this.pluginVersion = pluginVersion;
-  }
+    public String getPluginVersion() {
+        return pluginVersion;
+    }
 
-  public boolean isEnableRuntimePatch() {
-    return enableRuntimePatch;
-  }
+    public void setPluginVersion(String pluginVersion) {
+        this.pluginVersion = pluginVersion;
+    }
 
-  public void setEnableRuntimePatch(boolean enableRuntimePatch) {
-    this.enableRuntimePatch = enableRuntimePatch;
-  }
+    public boolean isEnableRuntimePatch() {
+        return enableRuntimePatch;
+    }
 
-  public Map<String, String> getIdeaProjects() {
-    return ideaProjects;
-  }
+    public void setEnableRuntimePatch(boolean enableRuntimePatch) {
+        this.enableRuntimePatch = enableRuntimePatch;
+    }
 
-  public void setIdeaProjects(Map<String, String> ideaProjects) {
-    this.ideaProjects = ideaProjects;
-  }
+    public Map<String, String> getIdeaProjects() {
+        return ideaProjects;
+    }
 
-  public void addProject(String project, String path){
-    this.ideaProjects.put(project, path);
-  }
+    public void setIdeaProjects(Map<String, String> ideaProjects) {
+        this.ideaProjects = ideaProjects;
+    }
+
+    public void addProject(String project, String path) {
+        this.ideaProjects.put(project, path);
+    }
 }
