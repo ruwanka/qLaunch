@@ -5,9 +5,14 @@ import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import javax.annotation.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 /**
- * Persistent global settings object for the Lombok plugin.
+ * 20/03/2019
+ *
+ * @author Ruwanka
+ *
+ * Persistent global settings object for the qLaunch plugin.
  */
 @State(
   name = "QLaunchSettings",
@@ -20,7 +25,7 @@ public class QLaunchSettings implements PersistentStateComponent<QLaunchPluginSt
    *
    * @return the unique {@link QLaunchSettings} instance.
    */
-  public static QLaunchSettings getInstance() {
+  static QLaunchSettings getInstance() {
     return ServiceManager.getService(QLaunchSettings.class);
   }
 
@@ -33,16 +38,8 @@ public class QLaunchSettings implements PersistentStateComponent<QLaunchPluginSt
   }
 
   @Override
-  public void loadState(QLaunchPluginState element) {
+  public void loadState(@NotNull QLaunchPluginState element) {
     myState = element;
-  }
-
-  public String getVersion() {
-    return myState.getPluginVersion();
-  }
-
-  public void setVersion(String version) {
-    myState.setPluginVersion(version);
   }
 
 }

@@ -18,7 +18,7 @@ public class QLaunchProjectLocator extends SimpleFileVisitor<Path> {
 
     private final QLaunchPluginState state;
 
-    public QLaunchProjectLocator(QLaunchPluginState state) {
+    QLaunchProjectLocator(QLaunchPluginState state) {
         this.state = state;
     }
 

@@ -13,6 +13,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * 20/03/2019
+ *
+ * @author Ruwanka
+ */
 public class QLaunchProjectLocateAction extends AnAction {
 
     public QLaunchProjectLocateAction() {
@@ -29,6 +34,7 @@ public class QLaunchProjectLocateAction extends AnAction {
             false,
             false
         );
+
         fileChooserDescriptor.setTitle("Locate Projects");
         fileChooserDescriptor.setDescription("Select directory to locate projects, "
             + "if entire directory needs to be scanned select drive");
@@ -56,7 +62,7 @@ public class QLaunchProjectLocateAction extends AnAction {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                indicator.setText("Finished locating IntelliJ Idea Projects...");
+                indicator.setText("Finished locating Intellij Idea Projects...");
             }
         });
     }

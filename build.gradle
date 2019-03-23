@@ -14,7 +14,6 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    implementation 'com.fifesoft:autocomplete:3.0.0'
 }
 
 intellij {
