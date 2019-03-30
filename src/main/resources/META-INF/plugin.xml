@@ -1,8 +1,10 @@
 <idea-plugin>
   <id>co.simpleq.qlaunch</id>
   <name>qLaunch</name>
-  <vendor email="ruwankamadhushan@gmail.com" url="http://simpleq.co">simpleq</vendor>
-  <version>0.0.1</version>
+  <vendor email="ruwankamadhushan@gmail.com" url="https://github.com/ruwanka/qLaunch">qLaunch
+  </vendor>
+  <version>0.0.2</version>
+  <depends>com.intellij.modules.lang</depends>
   <description>
     <![CDATA[
         qLaunch is a plugin that scans and stores all your IntelliJ projects
@@ -32,6 +34,12 @@
       text="Open Project">
       <add-to-group anchor="last" group-id="ToolsMenu"/>
       <keyboard-shortcut first-keystroke="control shift Q" keymap="$default"/>
+    </action>
+    <action class="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
+      description="project open dialog" id="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
+      text="Verify Indexed Projects">
+      <add-to-group anchor="last" group-id="ToolsMenu"/>
+      <keyboard-shortcut first-keystroke="control shift Q" keymap="$default" second-keystroke="V"/>
     </action>
   </actions>
 </idea-plugin>

@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'co.simpleq'
-version '0.0.1'
+version '0.0.2'
 
 sourceCompatibility = 1.8
 
@@ -21,6 +21,10 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      <ul>
+          <li>Scan project directories and indexing functionality</li>
+          <li>Open quick project open dialog</li>
+          <li>Verify indexed projects are valid</li>
+      </ul>
+      """
 }
