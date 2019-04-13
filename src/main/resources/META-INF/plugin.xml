@@ -3,7 +3,7 @@
   <name>qLaunch</name>
   <vendor email="ruwankamadhushan@gmail.com" url="https://github.com/ruwanka/qLaunch">qLaunch
   </vendor>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <depends>com.intellij.modules.lang</depends>
   <description>
     <![CDATA[
@@ -27,7 +27,6 @@
       description="Scan all drives for IntelliJ projects"
       id="co.simpleq.qlaunch.QLaunchProjectLocateAction" text="Locate Projects">
       <add-to-group anchor="last" group-id="ToolsMenu"/>
-      <keyboard-shortcut first-keystroke="control alt Q" keymap="$default"/>
     </action>
     <action class="co.simpleq.qlaunch.QLaunchProjectOpenAction"
       description="project open dialog" id="co.simpleq.qlaunch.QLaunchProjectOpenAction"
@@ -39,7 +38,6 @@
       description="project open dialog" id="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
       text="Verify Indexed Projects">
       <add-to-group anchor="last" group-id="ToolsMenu"/>
-      <keyboard-shortcut first-keystroke="control shift Q" keymap="$default" second-keystroke="V"/>
     </action>
   </actions>
 </idea-plugin>
