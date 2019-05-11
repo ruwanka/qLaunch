@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'co.simpleq'
-version '0.0.3'
+version '0.0.4'
 
 sourceCompatibility = 1.8
 
@@ -16,13 +16,10 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-intellij {
-    version '2018.3'
-}
 patchPluginXml {
     changeNotes """
       <ul>
-          <li>remove shortcuts for locate projects and verify projects</li>
+          <li>add support to version 2019.1 onwards</li>
       </ul>
       """
 }

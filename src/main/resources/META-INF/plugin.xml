@@ -3,7 +3,8 @@
   <name>qLaunch</name>
   <vendor email="ruwankamadhushan@gmail.com" url="https://github.com/ruwanka/qLaunch">qLaunch
   </vendor>
-  <version>0.0.3</version>
+  <idea-version since-build="2018" until-build="2019.*"/>
+  <version>0.0.4</version>
   <depends>com.intellij.modules.lang</depends>
   <description>
     <![CDATA[
@@ -11,12 +12,6 @@
         in your machine and provide you quick launch functionality
     ]]>
   </description>
-
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
 
   <extensions defaultExtensionNs="com.intellij">
     <applicationService serviceImplementation="co.simpleq.qlaunch.QLaunchSettings"/>
