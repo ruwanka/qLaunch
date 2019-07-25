@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'co.simpleq'
-version '0.0.4'
+version '0.0.5'
 
 sourceCompatibility = 1.8
 
@@ -19,7 +19,7 @@ dependencies {
 patchPluginXml {
     changeNotes """
       <ul>
-          <li>add support to version 2019.1 onwards</li>
+          <li>add support to version 2019.2 onwards</li>
       </ul>
       """
 }

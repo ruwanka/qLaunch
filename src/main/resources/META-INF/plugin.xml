@@ -3,8 +3,25 @@
   <name>qLaunch</name>
   <vendor email="ruwankamadhushan@gmail.com" url="https://github.com/ruwanka/qLaunch">qLaunch
   </vendor>
-  <idea-version since-build="2018" until-build="2019.*"/>
-  <version>0.0.4</version>
+  <actions>
+    <action class="co.simpleq.qlaunch.QLaunchProjectLocateAction"
+      description="Scan all drives for IntelliJ projects"
+      id="co.simpleq.qlaunch.QLaunchProjectLocateAction" text="Locate Projects">
+      <add-to-group anchor="last" group-id="ToolsMenu"/>
+    </action>
+    <action class="co.simpleq.qlaunch.QLaunchProjectOpenAction"
+      description="Project open dialog" id="co.simpleq.qlaunch.QLaunchProjectOpenAction"
+      text="Open Project">
+      <add-to-group anchor="last" group-id="ToolsMenu"/>
+      <keyboard-shortcut first-keystroke="control shift Q" keymap="$default"/>
+    </action>
+    <action class="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
+      description="Project open dialog" id="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
+      text="Verify Indexed Projects">
+      <add-to-group anchor="last" group-id="ToolsMenu"/>
+    </action>
+  </actions>
+  <idea-version since-build="2018" until-build="2019.2.*"/>
   <depends>com.intellij.modules.lang</depends>
   <description>
     <![CDATA[
@@ -17,22 +34,5 @@
     <applicationService serviceImplementation="co.simpleq.qlaunch.QLaunchSettings"/>
   </extensions>
 
-  <actions>
-    <action class="co.simpleq.qlaunch.QLaunchProjectLocateAction"
-      description="Scan all drives for IntelliJ projects"
-      id="co.simpleq.qlaunch.QLaunchProjectLocateAction" text="Locate Projects">
-      <add-to-group anchor="last" group-id="ToolsMenu"/>
-    </action>
-    <action class="co.simpleq.qlaunch.QLaunchProjectOpenAction"
-      description="project open dialog" id="co.simpleq.qlaunch.QLaunchProjectOpenAction"
-      text="Open Project">
-      <add-to-group anchor="last" group-id="ToolsMenu"/>
-      <keyboard-shortcut first-keystroke="control shift Q" keymap="$default"/>
-    </action>
-    <action class="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
-      description="project open dialog" id="co.simpleq.qlaunch.QLaunchPluginVerifyAction"
-      text="Verify Indexed Projects">
-      <add-to-group anchor="last" group-id="ToolsMenu"/>
-    </action>
-  </actions>
+  <version>0.0.5</version>
 </idea-plugin>
