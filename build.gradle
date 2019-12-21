@@ -1,15 +1,19 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.4.5'
+    id 'org.jetbrains.intellij' version '0.4.10'
 }
 
 group 'co.simpleq'
-version '0.0.5'
+version '0.0.6'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+intellij {
+    version '2019.3'
 }
 
 dependencies {
@@ -19,7 +23,7 @@ dependencies {
 patchPluginXml {
     changeNotes """
       <ul>
-          <li>add support to version 2019.2 onwards</li>
+          <li>add support to version 2019.3 onwards</li>
       </ul>
       """
 }
