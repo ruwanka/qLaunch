@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'co.simpleq'
-version '0.0.6'
+version '0.0.7'
 
 sourceCompatibility = 1.8
 
@@ -13,7 +13,7 @@ repositories {
 }
 
 intellij {
-    version '2019.3'
+    version '2020.1'
 }
 
 dependencies {
@@ -23,7 +23,7 @@ dependencies {
 patchPluginXml {
     changeNotes """
       <ul>
-          <li>add support to version 2019.3 onwards</li>
+          <li>add support to version 2020.1 onwards</li>
       </ul>
       """
 }

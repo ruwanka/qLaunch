@@ -21,7 +21,7 @@
       <add-to-group anchor="last" group-id="ToolsMenu"/>
     </action>
   </actions>
-  <idea-version since-build="183.4284" until-build="193.*"/>
+  <idea-version since-build="183.4284" until-build="201.*"/>
   <depends>com.intellij.modules.lang</depends>
   <description>
     <![CDATA[
@@ -34,5 +34,5 @@
     <applicationService serviceImplementation="co.simpleq.qlaunch.QLaunchSettings"/>
   </extensions>
 
-  <version>0.0.6</version>
+  <version>0.0.7</version>
 </idea-plugin>
