@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.4.10'
+    id 'org.jetbrains.intellij' version '0.7.2'
 }
 
 group 'co.simpleq'
-version '0.0.7'
+version '0.0.8'
 
 sourceCompatibility = 1.8
 
@@ -13,7 +13,7 @@ repositories {
 }
 
 intellij {
-    version '2020.1'
+    version '2021.1'
 }
 
 dependencies {
@@ -23,7 +23,8 @@ dependencies {
 patchPluginXml {
     changeNotes """
       <ul>
-          <li>add support to version 2020.1 onwards</li>
+          <li>0.0.8 - add support to version 2021.1 onwards</li>
+          <li>0.0.7 - add support to version 2020.1 onwards</li>
       </ul>
       """
 }
